@@ -4,8 +4,8 @@ import java.util.List;
 
 public class ExchangeRateResponse {
     private String table;
-    private String currency;
-    private String code;
+    private String no;
+    private String effectiveDate;
     private List<Rate> rates;
 
     public ExchangeRateResponse() {}
@@ -18,20 +18,20 @@ public class ExchangeRateResponse {
         this.table = table;
     }
 
-    public String getCurrency() {
-        return currency;
+    public String getNo() {
+        return no;
     }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
+    public void setNo(String no) {
+        this.no = no;
     }
 
-    public String getCode() {
-        return code;
+    public String getEffectiveDate() {
+        return effectiveDate;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setEffectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
     }
 
     public List<Rate> getRates() {
@@ -43,26 +43,26 @@ public class ExchangeRateResponse {
     }
 
     public static class Rate {
-        private String no;
-        private String effectiveDate;
+        private String currency;
+        private String code;
         private double mid;
 
         public Rate() {}
 
-        public String getNo() {
-            return no;
+        public String getCurrency() {
+            return currency;
         }
 
-        public void setNo(String no) {
-            this.no = no;
+        public void setCurrency(String currency) {
+            this.currency = currency;
         }
 
-        public String getEffectiveDate() {
-            return effectiveDate;
+        public String getCode() {
+            return code;
         }
 
-        public void setEffectiveDate(String effectiveDate) {
-            this.effectiveDate = effectiveDate;
+        public void setCode(String code) {
+            this.code = code;
         }
 
         public double getMid() {
@@ -74,3 +74,4 @@ public class ExchangeRateResponse {
         }
     }
 }
+
